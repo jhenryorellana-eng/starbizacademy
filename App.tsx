@@ -6,6 +6,10 @@ import HomePage from './pages/HomePage';
 import AdminPage from './pages/AdminPage';
 import CEOJuniorPage from './pages/CEOJuniorPage';
 import Parents30Page from './pages/Parents30Page';
+import CEOJuniorPrivacyPage from './pages/CEOJuniorPrivacyPage';
+import Parents30PrivacyPage from './pages/Parents30PrivacyPage';
+import CEOJuniorPolicyPage from './pages/CEOJuniorPolicyPage';
+import Parents30PolicyPage from './pages/Parents30PolicyPage';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +23,10 @@ const App: React.FC = () => {
             <Route path="/ceojunior" element={<CEOJuniorPage />} />
             <Route path="/padres-3" element={<Parents30Page />} />
             <Route path="/padres3" element={<Parents30Page />} />
+            <Route path="/ceo-junior/privacidad" element={<CEOJuniorPrivacyPage />} />
+            <Route path="/ceo-junior/politica-privacidad" element={<CEOJuniorPolicyPage />} />
+            <Route path="/padres-3/privacidad" element={<Parents30PrivacyPage />} />
+            <Route path="/padres-3/politica-privacidad" element={<Parents30PolicyPage />} />
           </Routes>
         </AuthProvider>
       </LanguageProvider>
