@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, MessageSquare, MapPin, Instagram, Facebook, Twitter, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { Mail, MessageSquare, MapPin, Instagram, Facebook, Twitter, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { useContacts } from '../hooks/useContacts';
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 
@@ -14,7 +13,6 @@ interface FormData {
 
 const Contact: React.FC = () => {
   const { t } = useLanguage();
-  const { addContact } = useContacts({ autoFetch: false });
 
   const [formData, setFormData] = useState<FormData>({
     nombre: '',
@@ -51,7 +49,7 @@ const Contact: React.FC = () => {
     return true;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage('');
 
@@ -60,18 +58,24 @@ const Contact: React.FC = () => {
       return;
     }
 
-    setStatus('loading');
+    // Formatear mensaje para WhatsApp
+    const mensaje = `*Nuevo contacto de Starbiz Academy*
 
-    const { success, error } = await addContact(formData);
+*Nombre:* ${formData.nombre}
+*Email:* ${formData.email}
+*Asunto:* ${formData.asunto}
 
-    if (success) {
-      setStatus('success');
-      setFormData({ nombre: '', email: '', asunto: '', mensaje: '' });
-      setTimeout(() => setStatus('idle'), 5000);
-    } else {
-      setStatus('error');
-      setErrorMessage(error || 'Error al enviar el mensaje');
-    }
+*Mensaje:*
+${formData.mensaje}`;
+
+    // Número de WhatsApp sin espacios ni caracteres especiales
+    const telefono = '18019413479';
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, '_blank');
+    setStatus('success');
+    setFormData({ nombre: '', email: '', asunto: '', mensaje: '' });
+    setTimeout(() => setStatus('idle'), 5000);
   };
 
   return (
@@ -159,18 +163,9 @@ const Contact: React.FC = () => {
 
               <button
                 type="submit"
-                disabled={status === 'loading'}
-                className="w-full py-4 bg-white text-black font-bold rounded-lg hover:bg-brand-cyan transition-colors flex items-center justify-center gap-2 font-display tracking-widest uppercase disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 bg-white text-black font-bold rounded-lg hover:bg-brand-cyan transition-colors flex items-center justify-center gap-2 font-display tracking-widest uppercase"
               >
-                {status === 'loading' ? (
-                  <>
-                    <Loader2 size={18} className="animate-spin" /> Enviando...
-                  </>
-                ) : (
-                  <>
-                    <Send size={18} /> {t.contact.btn_send}
-                  </>
-                )}
+                <Send size={18} /> {t.contact.btn_send}
               </button>
             </form>
           </div>
@@ -197,7 +192,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-gray-500 text-xs uppercase tracking-widest mb-1">{t.contact.info_phone}</p>
-                    <p className="text-white text-xl font-medium">+1 (801) 555-0123</p>
+                    <p className="text-white text-xl font-medium">+1 (801) 941-3479</p>
                   </div>
                 </div>
 
