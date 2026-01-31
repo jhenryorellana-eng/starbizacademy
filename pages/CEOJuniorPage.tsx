@@ -144,7 +144,7 @@ const CEOJuniorPage: React.FC = () => {
       : 'Hi, I\'m interested in CEO Junior 2026'
   )}`;
 
-  const communityLink = 'https://www.stareduca.ai/register';
+  const communityLink = 'https://app.starbizacademy.com';
 
   // Hero video controls
   const toggleHeroVideo = () => {

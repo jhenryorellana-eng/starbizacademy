@@ -62,11 +62,7 @@ const Parents30Page: React.FC = () => {
     }
   };
 
-  const whatsappLink = `https://wa.me/13854564470?text=${encodeURIComponent(
-    language === 'es'
-      ? 'Hola, me interesa Padres 3.0'
-      : 'Hi, I\'m interested in Parents 3.0'
-  )}`;
+  const communityLink = 'https://app.starbizacademy.com';
 
   // 7 Intelligences
   const intelligences = [
@@ -184,7 +180,7 @@ const Parents30Page: React.FC = () => {
               </motion.button>
 
               <motion.a
-                href={whatsappLink}
+                href={communityLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2 bg-brand-orange text-black rounded-full text-sm font-bold flex items-center gap-2"
@@ -265,7 +261,7 @@ const Parents30Page: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4 mb-12"
             >
               <motion.a
-                href={whatsappLink}
+                href={communityLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group px-8 py-4 bg-brand-orange text-black rounded-xl font-bold text-lg flex items-center justify-center gap-3"
@@ -1296,7 +1292,7 @@ const Parents30Page: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href={whatsappLink}
+                href={communityLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group px-10 py-5 bg-brand-orange text-black rounded-xl font-bold text-lg flex items-center justify-center gap-3"
@@ -1309,7 +1305,7 @@ const Parents30Page: React.FC = () => {
               </motion.a>
 
               <motion.a
-                href={whatsappLink}
+                href={communityLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-10 py-5 border border-white/20 rounded-xl font-semibold text-lg flex items-center justify-center gap-3 hover:bg-white/5 transition-colors"
@@ -1335,7 +1331,7 @@ const Parents30Page: React.FC = () => {
               © {new Date().getFullYear()} Starbiz Academy
             </p>
             <a
-              href={whatsappLink}
+              href={communityLink}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-white/5 transition-colors"
