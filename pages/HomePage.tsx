@@ -12,6 +12,7 @@ import Testimonials from '../components/Testimonials';
 import Events from '../components/Events';
 import Contact from '../components/Contact';
 import VideoInstitucional from '../components/VideoInstitucional';
+import EcosystemShowcase from '../components/EcosystemShowcase';
 
 const HomePage: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -36,6 +37,7 @@ const HomePage: React.FC = () => {
           <Navbar />
           <main>
             <Hero />
+            <EcosystemShowcase />
             <VideoInstitucional />
             <About />
             <SevenIntelligences />

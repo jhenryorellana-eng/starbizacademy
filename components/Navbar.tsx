@@ -19,6 +19,7 @@ const Navbar: React.FC = () => {
     { name: t.navbar.home, href: '#inicio' },
     { name: t.navbar.about, href: '#quienes-somos' },
     { name: t.navbar.intelligence, href: '#metodologia' },
+    { name: t.ecosystemShowcase?.navLink || 'Ecosistema', href: '/ecosistema' },
   ];
 
   const communityLinks = [
