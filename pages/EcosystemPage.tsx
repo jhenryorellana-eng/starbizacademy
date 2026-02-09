@@ -431,6 +431,17 @@ const AppCard: React.FC<{
           {t.ecosystemShowcase.viewDetails}
         </span>
       </div>
+
+      <a
+        href="https://app.starbizacademy.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
+        className="mt-4 w-full inline-flex items-center justify-center px-4 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest text-white hover:scale-[1.02] transition-transform duration-200"
+        style={{ background: `linear-gradient(135deg, ${mainColor}, ${mainColor}99)` }}
+      >
+        {t.ecosystemShowcase.discoverApp}
+      </a>
     </motion.div>
   );
 };
