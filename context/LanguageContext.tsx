@@ -643,7 +643,7 @@ const translations = {
       ratingBreakdown: "Desglose de Calificaciones",
       navLink: "Ecosistema",
       pageTitle: "ECOSISTEMA STARBIZ",
-      pageSubtitle: "7 aplicaciones. 1 misión.",
+      pageSubtitle: "Dos aplicaciones, un solo propósito. Tu hijo desarrolla mentalidad de líder. Tú te conviertes en el padre que esta era necesita. Juntos, transforman el futuro de su familia.",
       description: "Descripción",
       availableIn: "Disponible en",
       ages: "años",
@@ -651,7 +651,8 @@ const translations = {
       moreFrom: "Más del ecosistema",
       accessHub: "Acceder al Hub",
       readyToStart: "¿Listo para transformar a tu familia?",
-      accessNow: "Comenzar Ahora"
+      accessNow: "Comenzar Ahora",
+      discoverApp: "Descubre la App"
     }
   },
   en: {
@@ -1288,7 +1289,7 @@ const translations = {
       ratingBreakdown: "Rating Breakdown",
       navLink: "Ecosystem",
       pageTitle: "STARBIZ ECOSYSTEM",
-      pageSubtitle: "7 apps. 1 mission.",
+      pageSubtitle: "Two apps, one purpose. Your child develops a leader's mindset. You become the parent this era needs. Together, you transform your family's future.",
       description: "Description",
       availableIn: "Available on",
       ages: "years",
@@ -1296,7 +1297,8 @@ const translations = {
       moreFrom: "More from the ecosystem",
       accessHub: "Access Hub",
       readyToStart: "Ready to transform your family?",
-      accessNow: "Start Now"
+      accessNow: "Start Now",
+      discoverApp: "Discover the App"
     }
   }
 };

@@ -344,6 +344,19 @@ const AppDetailModal: React.FC<{
               </div>
             </div>
           </div>
+
+          {/* ─── CTA ─── */}
+          <div className="mt-10 text-center">
+            <a
+              href="https://app.starbizacademy.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-10 py-4 rounded-full font-bold text-sm uppercase tracking-widest text-white hover:scale-105 transition-transform duration-300 shadow-lg"
+              style={{ background: `linear-gradient(135deg, ${mainColor}, ${mainColor}99)`, boxShadow: `0 8px 30px ${mainColor}30` }}
+            >
+              {t.ecosystemShowcase.discoverApp}
+            </a>
+          </div>
         </div>
       </motion.div>
     </motion.div>
