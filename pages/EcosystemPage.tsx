@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, X, ChevronLeft, ChevronRight, CheckCircle, Shield, Wifi, WifiOff, Smartphone, Users, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import Navbar from '../components/Navbar';
 import Starfield from '../components/Starfield';
@@ -474,6 +474,12 @@ const EcosystemPage: React.FC = () => {
   const { t, language } = useLanguage();
   const [filter, setFilter] = useState<FilterType>('all');
   const [selectedAppId, setSelectedAppId] = useState<string | null>(null);
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const appParam = searchParams.get('app');
+    if (appParam) setSelectedAppId(appParam);
+  }, [searchParams]);
 
   const filteredApps = ecosystemApps.filter((app) => {
     if (filter === 'all') return true;

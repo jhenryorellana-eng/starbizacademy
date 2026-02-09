@@ -53,26 +53,28 @@ const AppIcon: React.FC<{
   };
 
   return (
-    <motion.div
-      initial={{ scale: 0, opacity: 0 }}
-      whileInView={{ scale: 1, opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.1, type: 'spring', stiffness: 200, damping: 15 }}
-      whileHover={{ scale: 1.15, y: -4 }}
-      className="flex flex-col items-center gap-2 group cursor-pointer"
-    >
-      <div
-        className={`${sizeClass} rounded-2xl flex items-center justify-center shadow-lg transition-shadow duration-300 ${colorMap[app.color] || ''}`}
-        style={{ background: app.iconGradient }}
+    <Link to={`/ecosistema?app=${app.id}`}>
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.1, type: 'spring', stiffness: 200, damping: 15 }}
+        whileHover={{ scale: 1.15, y: -4 }}
+        className="flex flex-col items-center gap-2 group cursor-pointer"
       >
-        <span className={isSuperApp ? 'animate-float' : ''} style={{ animationDelay: `${index * 0.4}s` }}>
-          {app.icon}
+        <div
+          className={`${sizeClass} rounded-2xl flex items-center justify-center shadow-lg transition-shadow duration-300 ${colorMap[app.color] || ''}`}
+          style={{ background: app.iconGradient }}
+        >
+          <span className={isSuperApp ? 'animate-float' : ''} style={{ animationDelay: `${index * 0.4}s` }}>
+            {app.icon}
+          </span>
+        </div>
+        <span className="text-xs text-gray-500 group-hover:text-white transition-colors font-medium text-center max-w-[80px] leading-tight">
+          {language === 'es' ? app.nameEs : app.name}
         </span>
-      </div>
-      <span className="text-xs text-gray-500 group-hover:text-white transition-colors font-medium text-center max-w-[80px] leading-tight">
-        {language === 'es' ? app.nameEs : app.name}
-      </span>
-    </motion.div>
+      </motion.div>
+    </Link>
   );
 };
 
@@ -266,6 +268,16 @@ const EcosystemShowcase: React.FC = () => {
           <p className="text-gray-400 text-lg md:text-xl mt-4 max-w-2xl mx-auto leading-relaxed">
             {t.ecosystemShowcase.subtitle}
           </p>
+          <Link
+            to="/ecosistema"
+            className="group relative inline-flex mt-8 px-10 py-4 bg-gradient-to-r from-brand-cyan via-brand-purple to-brand-orange text-white font-bold text-sm uppercase tracking-widest rounded-full overflow-hidden hover:scale-105 transition-transform duration-300 shadow-lg shadow-brand-purple/20"
+          >
+            <span className="relative z-10 flex items-center gap-3">
+              {t.ecosystemShowcase.exploreAll}
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </span>
+            <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+          </Link>
         </motion.div>
 
         {/* App Icons Cluster */}
