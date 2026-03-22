@@ -132,8 +132,8 @@ const CEOJuniorPage: React.FC = () => {
     }
   ];
 
-  // Hero countdown: January 5, 2026
-  const programStartDate = new Date('2026-01-05T00:00:00');
+  // Hero countdown: April 15, 2026
+  const programStartDate = new Date('2026-04-15T00:00:00');
 
   // Urgency countdown: 24 hours from now (dynamic)
   const urgencyTargetDate = new Date(Date.now() + 24 * 60 * 60 * 1000);

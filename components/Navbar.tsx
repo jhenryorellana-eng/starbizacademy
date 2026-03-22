@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 const Navbar: React.FC = () => {
@@ -8,12 +9,30 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState(false);
   const { t, language, toggleLanguage } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      if (location.pathname !== '/') {
+        navigate('/' + href);
+        setTimeout(() => {
+          const el = document.getElementById(href.slice(1));
+          el?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      } else {
+        const el = document.getElementById(href.slice(1));
+        el?.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location.pathname, navigate]);
 
   const links = [
     { name: t.navbar.home, href: '#inicio' },
@@ -37,7 +56,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between w-full">
           
           {/* LOGO CONTAINER */}
-          <a href="#inicio" className="relative w-[260px] h-[60px] flex items-center justify-center group select-none">
+          <a href="#inicio" onClick={(e) => handleNavClick(e, '#inicio')} className="relative w-[260px] h-[60px] flex items-center justify-center group select-none">
             
             {/* --- Rocket Orbit Layer --- */}
             <div className="rocket-orbit-container absolute inset-0 w-full h-full pointer-events-none">
@@ -148,6 +167,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="px-6 py-2 text-sm font-medium text-gray-400 hover:text-white hover:bg-white/5 rounded-full transition-all duration-300"
               >
                 {link.name}
@@ -166,6 +186,7 @@ const Navbar: React.FC = () => {
                     <a
                       key={link.name}
                       href={link.href}
+                      onClick={(e) => handleNavClick(e, link.href)}
                       className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all"
                     >
                       {link.name}
@@ -190,6 +211,7 @@ const Navbar: React.FC = () => {
 
              <a
               href="#contacto"
+              onClick={(e) => handleNavClick(e, '#contacto')}
               className="relative inline-flex group"
             >
               <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
@@ -234,7 +256,7 @@ const Navbar: React.FC = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => { handleNavClick(e, link.href); setIsOpen(false); }}
                   className="px-4 py-3 rounded-xl text-lg font-medium text-gray-300 hover:text-white hover:bg-white/5"
                 >
                   {link.name}
@@ -263,7 +285,7 @@ const Navbar: React.FC = () => {
                           <a
                             key={link.name}
                             href={link.href}
-                            onClick={() => { setIsOpen(false); setMobileSubmenuOpen(false); }}
+                            onClick={(e) => { handleNavClick(e, link.href); setIsOpen(false); setMobileSubmenuOpen(false); }}
                             className="block px-4 py-2 text-base text-gray-400 hover:text-white rounded-lg"
                           >
                             {link.name}
@@ -277,7 +299,7 @@ const Navbar: React.FC = () => {
 
               <a
                 href="#contacto"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => { handleNavClick(e, '#contacto'); setIsOpen(false); }}
                 className="mt-4 text-center bg-brand-orange text-white px-4 py-3 rounded-xl font-bold font-display uppercase tracking-wider"
               >
                 {t.navbar.cta}

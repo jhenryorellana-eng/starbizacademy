@@ -41,7 +41,7 @@ const Parents30Page: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const landing = t.parents30Landing;
-  const programStartDate = new Date('2026-01-05T00:00:00'); // Program starts January 5, 2026
+  const programStartDate = new Date('2026-04-15T00:00:00'); // Program starts April 15, 2026
 
   // Video controls
   const toggleVideo = () => {
@@ -291,7 +291,7 @@ const Parents30Page: React.FC = () => {
               transition={{ delay: 0.35 }}
             >
               <p className="text-brand-orange/70 text-sm font-medium mb-3 uppercase tracking-wider">
-                {language === 'es' ? 'Inicia el 5 de Enero 2026' : 'Starts January 5, 2026'}
+                {language === 'es' ? 'Inicia el 15 de Abril 2026' : 'Starts April 15, 2026'}
               </p>
               <CountdownTimer
                 targetDate={programStartDate}
@@ -1229,7 +1229,7 @@ const Parents30Page: React.FC = () => {
             >
               <Clock className="w-5 h-5 text-brand-orange" />
               <span className="text-white font-medium">
-                {language === 'es' ? '5 de Enero, 2026' : 'January 5, 2026'}
+                {language === 'es' ? '15 de Abril, 2026' : 'April 15, 2026'}
               </span>
             </motion.div>
 

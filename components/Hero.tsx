@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import Starfield from './Starfield';
 
@@ -47,50 +48,36 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-cyan/30 bg-brand-cyan/5 text-brand-cyan text-sm font-semibold mb-8 backdrop-blur-sm"
-            >
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-cyan opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-cyan"></span>
-              </span>
-              {t.hero.tag}
-            </motion.div>
-
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[0.9] text-white mb-8 font-display">
-              {t.hero.title.line1} <br />
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white mb-10 font-display">
+              La primera academia de{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-brand-yellow to-brand-orange bg-[200%_auto] animate-[gradient_3s_linear_infinite]">
-                {t.hero.title.line2}
-              </span><br />
-              {t.hero.title.line3}
+                negocios digitales
+              </span>{' '}
+              para{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-purple">
+                adolescentes latinos
+              </span>{' '}
+              con sede en Estados Unidos.
             </h1>
-            
-            <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-              {t.hero.description}
-            </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
-              {/* SUPER CTA: PROGRAMS */}
-              <a
-                href="#comunidades"
+              <Link
+                to="/ecosistema"
                 className="group relative px-10 py-5 bg-transparent overflow-hidden rounded-xl text-white font-bold font-display tracking-widest text-lg shadow-[0_0_30px_rgba(255,107,0,0.6)] hover:shadow-[0_0_60px_rgba(255,107,0,0.8)] transition-all hover:scale-105"
               >
                 {/* Animated Gradient Background */}
                 <div className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-brand-orange via-red-500 to-brand-purple animate-[gradient_3s_linear_infinite]"></div>
-                
+
                 {/* Shine Effect */}
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent translate-x-[-100%] animate-[shimmer_2s_infinite]"></div>
-                
+
                 {/* Border Glow */}
                 <div className="absolute inset-0 rounded-xl border-2 border-white/30 group-hover:border-white/80 transition-colors"></div>
 
                 <span className="relative z-10 flex items-center gap-2 drop-shadow-md">
                   {t.hero.cta_programs} <span className="text-xl">→</span>
                 </span>
-              </a>
+              </Link>
             </div>
           </motion.div>
 

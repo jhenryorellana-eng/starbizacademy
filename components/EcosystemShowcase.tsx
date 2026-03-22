@@ -1,9 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Star, ArrowRight, CheckCircle, Play } from 'lucide-react';
+import { Star, ArrowRight, CheckCircle, Play, Rocket, Users, GraduationCap, Mic, BookOpen, Building2, Lightbulb } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { ecosystemApps, getSuperApps, getMiniApps, type EcosystemApp } from '../data/ecosystem-data';
+
+const iconMap: Record<string, React.FC<{ size?: number; className?: string }>> = {
+  Rocket, Users, GraduationCap, Star, Mic, BookOpen, Building2, Lightbulb,
+};
+
+const AppLucideIcon: React.FC<{ iconName: string; size?: number; className?: string }> = ({ iconName, size = 24, className }) => {
+  const Icon = iconMap[iconName];
+  if (!Icon) return null;
+  return <Icon size={size} className={className} />;
+};
 
 // ─── Star Rating Display ───
 const StarRating: React.FC<{ rating: number; size?: number }> = ({ rating, size = 14 }) => {
@@ -50,10 +60,13 @@ const AppIcon: React.FC<{
     purple: 'shadow-brand-purple/40 hover:shadow-brand-purple/70',
     emerald: 'shadow-emerald-500/40 hover:shadow-emerald-500/70',
     pink: 'shadow-pink-500/40 hover:shadow-pink-500/70',
+    amber: 'shadow-amber-500/40 hover:shadow-amber-500/70',
+    rose: 'shadow-rose-500/40 hover:shadow-rose-500/70',
+    teal: 'shadow-teal-500/40 hover:shadow-teal-500/70',
   };
 
   return (
-    <Link to={`/ecosistema?app=${app.id}`}>
+    <Link to="/ecosistema">
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -67,7 +80,7 @@ const AppIcon: React.FC<{
           style={{ background: app.iconGradient }}
         >
           <span className={isSuperApp ? 'animate-float' : ''} style={{ animationDelay: `${index * 0.4}s` }}>
-            {app.icon}
+            <AppLucideIcon iconName={app.icon} size={isSuperApp ? 32 : 22} className="text-white" />
           </span>
         </div>
         <span className="text-xs text-gray-500 group-hover:text-white transition-colors font-medium text-center max-w-[80px] leading-tight">
@@ -135,13 +148,13 @@ const SuperAppSpotlight: React.FC<{
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2">
-            <StarRating rating={app.stats.averageRating} size={16} />
-            <span className="text-white font-bold">{app.stats.averageRating}</span>
-            <span className="text-gray-500 text-sm">({app.stats.totalRatings} {t.ecosystemShowcase.ratings})</span>
-          </div>
-        </div>
+        <Link
+          to="/ecosistema"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm text-white hover:scale-105 transition-transform duration-200 mt-2"
+          style={{ background: app.color === 'cyan' ? 'linear-gradient(135deg, #00F0FF, #7000FF)' : 'linear-gradient(135deg, #FF6B00, #FFC800)' }}
+        >
+          {t.ecosystemShowcase.enrollCta}
+        </Link>
       </motion.div>
 
       {/* Media Content */}
@@ -202,6 +215,9 @@ const MiniAppCard: React.FC<{ app: EcosystemApp; index: number }> = ({ app, inde
     emerald: 'hover:border-emerald-500/40',
     pink: 'hover:border-pink-500/40',
     cyan: 'hover:border-brand-cyan/40',
+    amber: 'hover:border-amber-500/40',
+    rose: 'hover:border-rose-500/40',
+    teal: 'hover:border-teal-500/40',
   };
 
   return (
@@ -215,10 +231,10 @@ const MiniAppCard: React.FC<{ app: EcosystemApp; index: number }> = ({ app, inde
     >
       <div className="flex items-center gap-3 mb-3">
         <div
-          className="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+          className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
           style={{ background: app.iconGradient }}
         >
-          {app.icon}
+          <AppLucideIcon iconName={app.icon} size={20} className="text-white" />
         </div>
         <div className="min-w-0">
           <h4 className="text-white font-bold text-sm truncate">{language === 'es' ? app.nameEs : app.name}</h4>

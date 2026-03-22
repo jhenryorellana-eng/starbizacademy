@@ -25,17 +25,13 @@ const translations = {
       cta: "CONTÁCTANOS"
     },
     hero: {
-      tag: "Liderazgo Digital & IA",
-      title: {
-        line1: "EL DESPERTAR",
-        line2: "DE LA NUEVA",
-        line3: "GENERACIÓN Z"
-      },
-      description: "\"Formamos a la nueva generación de líderes y empresarios digitales globales, con el carácter y la visión para dominar la era de la IA.\"",
-      cta_primary: "UNIRSE AHORA",
-      cta_secondary: "VER VIDEO",
-      cta_programs: "Ver Comunidad",
-      scroll: "Explorar Sistema"
+      tag: "",
+      title: "La primera academia de negocios digitales para adolescentes latinos con sede en Estados Unidos.",
+      description: "",
+      cta_primary: "",
+      cta_secondary: "",
+      cta_programs: "Conoce nuestra propuesta",
+      scroll: ""
     },
     about: {
       title: "IDENTIDAD Y ORIGEN",
@@ -618,7 +614,7 @@ const translations = {
     ecosystemShowcase: {
       pretitle: "ECOSISTEMA COMPLETO",
       title: "TODO EN UN UNIVERSO",
-      subtitle: "2 Super Apps y 5 Mini Apps trabajando juntas para transformar a tu familia en la era digital.",
+      subtitle: "2 Super Apps y 6 Mini Apps trabajando juntas para transformar a tu familia en la era digital.",
       superApps: "Super Apps",
       miniApps: "Mini Apps",
       ratings: "calificaciones",
@@ -642,17 +638,24 @@ const translations = {
       noReviews: "Aún no hay reseñas.",
       ratingBreakdown: "Desglose de Calificaciones",
       navLink: "Ecosistema",
-      pageTitle: "ECOSISTEMA STARBIZ",
-      pageSubtitle: "Dos aplicaciones, un solo propósito. Tu hijo desarrolla mentalidad de líder. Tú te conviertes en el padre que esta era necesita. Juntos, transforman el futuro de su familia.",
+      pageTitle: "NUESTRO ECOSISTEMA",
+      pageSubtitle: "Todo lo que tu familia necesita para crecer en la era digital",
       description: "Descripción",
       availableIn: "Disponible en",
       ages: "años",
       getApp: "Obtener",
       moreFrom: "Más del ecosistema",
       accessHub: "Acceder al Hub",
-      readyToStart: "¿Listo para transformar a tu familia?",
+      readyToStart: "¿Listo para empezar?",
       accessNow: "Comenzar Ahora",
-      discoverApp: "Descubre la App"
+      discoverApp: "Descubre la App",
+      enrollCta: "Inscríbete ahora. Inicio de clases: 15 de abril",
+      selectApp: "Selecciona una app para ver qué incluye",
+      whatIncludes: "¿Qué incluye",
+      ceoJuniorDesc: "La app donde tu hijo aprende negocios digitales, inglés profesional e inteligencia artificial, con mentores reales desde Estados Unidos.",
+      padres30Desc: "Tu centro de control como padre: aprende crianza digital, monitorea el progreso de tus hijos y accede a contenido de expertos.",
+      forYourChild: "Para tu hijo (13-18 años)",
+      forYouAsParent: "Para ti como padre/madre"
     }
   },
   en: {
@@ -671,17 +674,13 @@ const translations = {
       cta: "CONTACT US"
     },
     hero: {
-      tag: "Digital Leadership & AI",
-      title: {
-        line1: "THE AWAKENING",
-        line2: "OF THE NEW",
-        line3: "GENERATION Z"
-      },
-      description: "\"Training the new generation of global digital leaders and entrepreneurs, with the character and vision to master the AI era.\"",
-      cta_primary: "JOIN NOW",
-      cta_secondary: "WATCH VIDEO",
-      cta_programs: "View Community",
-      scroll: "Explore System"
+      tag: "",
+      title: "The first digital business academy for Latino teens based in the United States.",
+      description: "",
+      cta_primary: "",
+      cta_secondary: "",
+      cta_programs: "Discover our program",
+      scroll: ""
     },
     about: {
       title: "IDENTITY AND ORIGEN",
@@ -1264,7 +1263,7 @@ const translations = {
     ecosystemShowcase: {
       pretitle: "COMPLETE ECOSYSTEM",
       title: "ALL IN ONE UNIVERSE",
-      subtitle: "2 Super Apps and 5 Mini Apps working together to transform your family in the digital era.",
+      subtitle: "2 Super Apps and 6 Mini Apps working together to transform your family in the digital era.",
       superApps: "Super Apps",
       miniApps: "Mini Apps",
       ratings: "ratings",
@@ -1288,17 +1287,24 @@ const translations = {
       noReviews: "No reviews yet.",
       ratingBreakdown: "Rating Breakdown",
       navLink: "Ecosystem",
-      pageTitle: "STARBIZ ECOSYSTEM",
-      pageSubtitle: "Two apps, one purpose. Your child develops a leader's mindset. You become the parent this era needs. Together, you transform your family's future.",
+      pageTitle: "OUR ECOSYSTEM",
+      pageSubtitle: "Everything your family needs to thrive in the digital era",
       description: "Description",
       availableIn: "Available on",
       ages: "years",
       getApp: "Get",
       moreFrom: "More from the ecosystem",
       accessHub: "Access Hub",
-      readyToStart: "Ready to transform your family?",
+      readyToStart: "Ready to start?",
       accessNow: "Start Now",
-      discoverApp: "Discover the App"
+      discoverApp: "Discover the App",
+      enrollCta: "Enroll now. Classes start: April 15",
+      selectApp: "Select an app to see what's included",
+      whatIncludes: "What's included in",
+      ceoJuniorDesc: "The app where your child learns digital business, professional English, and artificial intelligence, with real mentors from the United States.",
+      padres30Desc: "Your control center as a parent: learn digital parenting, monitor your children's progress, and access expert content.",
+      forYourChild: "For your child (13-18 years)",
+      forYouAsParent: "For you as a parent"
     }
   }
 };
