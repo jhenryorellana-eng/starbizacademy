@@ -69,7 +69,7 @@ const MiniAppCard: React.FC<{ app: EcosystemApp; index: number; enrollText: stri
       </div>
 
       <a
-        href="https://app.starbizacademy.com/enrollment"
+        href="https://app.starbizacademy.com/checkout"
         target="_blank"
         rel="noopener noreferrer"
         className="block w-full py-3 rounded-xl font-bold text-sm text-white text-center transition-all duration-200 hover:scale-[1.02] hover:brightness-110"
@@ -244,7 +244,7 @@ const EcosystemPage: React.FC = () => {
               {t.ecosystemShowcase.readyToStart}
             </p>
             <a
-              href="https://app.starbizacademy.com/enrollment"
+              href="https://app.starbizacademy.com/checkout"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-brand-orange via-brand-purple to-brand-cyan text-white font-bold text-sm uppercase tracking-widest rounded-full hover:scale-105 transition-transform duration-300 shadow-lg shadow-brand-purple/30"
