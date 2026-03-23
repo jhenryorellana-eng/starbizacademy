@@ -68,12 +68,15 @@ const MiniAppCard: React.FC<{ app: EcosystemApp; index: number; enrollText: stri
         ))}
       </div>
 
-      <button
-        className="w-full py-3 rounded-xl font-bold text-sm text-white transition-all duration-200 hover:scale-[1.02] hover:brightness-110"
+      <a
+        href="https://app.starbizacademy.com/enrollment"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full py-3 rounded-xl font-bold text-sm text-white text-center transition-all duration-200 hover:scale-[1.02] hover:brightness-110"
         style={{ background: `linear-gradient(135deg, ${mainColor}, ${mainColor}99)`, boxShadow: `0 4px 20px ${mainColor}25` }}
       >
         {enrollText}
-      </button>
+      </a>
     </motion.div>
   );
 };
@@ -240,11 +243,14 @@ const EcosystemPage: React.FC = () => {
             <p className="text-2xl md:text-3xl font-bold text-white font-display mb-6">
               {t.ecosystemShowcase.readyToStart}
             </p>
-            <button
+            <a
+              href="https://app.starbizacademy.com/enrollment"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-brand-orange via-brand-purple to-brand-cyan text-white font-bold text-sm uppercase tracking-widest rounded-full hover:scale-105 transition-transform duration-300 shadow-lg shadow-brand-purple/30"
             >
               {t.ecosystemShowcase.enrollCta}
-            </button>
+            </a>
           </motion.div>
         </div>
       </main>
