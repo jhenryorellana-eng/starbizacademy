@@ -64,7 +64,7 @@ export const ecosystemApps: EcosystemApp[] = [
     nameEs: 'CEO Junior',
     shortDescription: 'The teen entrepreneur community transforming the next generation of leaders.',
     shortDescriptionEs: 'La comunidad de adolescentes empresarios que transforma la siguiente generación de líderes.',
-    fullDescription: 'CEO Junior is a comprehensive super app designed for teenagers aged 13-18 who want to develop entrepreneurial skills, leadership, and a global business mindset. Through structured modules covering professional English, web development, success mindset, and global business vision, teens gain real-world skills while connecting with a community of like-minded young entrepreneurs. The program includes an exchange program opportunity in Utah, USA.',
+    fullDescription: 'CEO Junior is a comprehensive super app designed for teenagers aged 10-17 who want to develop entrepreneurial skills, leadership, and a global business mindset. Through structured modules covering professional English, web development, success mindset, and global business vision, teens gain real-world skills while connecting with a community of like-minded young entrepreneurs. The program includes an exchange program opportunity in Utah, USA.',
     fullDescriptionEs: 'CEO Junior es una super app integral diseñada para adolescentes de 13 a 18 años que desean desarrollar habilidades empresariales, liderazgo y una mentalidad de negocios global. A través de módulos estructurados que cubren inglés profesional, desarrollo web, mentalidad de éxito y visión empresarial global, los jóvenes adquieren habilidades del mundo real mientras se conectan con una comunidad de jóvenes emprendedores. El programa incluye una oportunidad de intercambio en Utah, USA.',
     icon: 'Rocket',
     iconGradient: 'linear-gradient(135deg, #00F0FF, #7000FF)',
@@ -84,7 +84,7 @@ export const ecosystemApps: EcosystemApp[] = [
       { en: 'Gamified Learning with XP & Badges', es: 'Aprendizaje Gamificado con XP y Badges' },
     ],
     technicalInfo: {
-      audienceAge: '13-18',
+      audienceAge: '10-17',
       requirements: 'iOS 16+ / Android 12+',
       requiresMembership: true,
       offlineSupport: true,
@@ -213,7 +213,7 @@ export const ecosystemApps: EcosystemApp[] = [
       { en: 'Community Feed', es: 'Feed de Comunidad' },
     ],
     technicalInfo: {
-      audienceAge: '13-18',
+      audienceAge: '10-17',
       requirements: 'CEO Junior App + Active Membership',
       requiresMembership: true,
       offlineSupport: true,
@@ -295,7 +295,7 @@ export const ecosystemApps: EcosystemApp[] = [
       { en: 'Search by Intelligence', es: 'Búsqueda por Inteligencia' },
     ],
     technicalInfo: {
-      audienceAge: '13-18',
+      audienceAge: '10-17',
       requirements: 'CEO Junior App + Active Membership',
       requiresMembership: true,
       offlineSupport: true,
@@ -335,7 +335,7 @@ export const ecosystemApps: EcosystemApp[] = [
       { en: 'Save Favorite Lessons', es: 'Guarda Lecciones Favoritas' },
     ],
     technicalInfo: {
-      audienceAge: '13-18',
+      audienceAge: '10-17',
       requirements: 'CEO Junior App + Active Membership',
       requiresMembership: true,
       offlineSupport: true,
@@ -375,7 +375,7 @@ export const ecosystemApps: EcosystemApp[] = [
       { en: 'Favorite & Bookmark', es: 'Favoritos y Marcadores' },
     ],
     technicalInfo: {
-      audienceAge: '13-18',
+      audienceAge: '10-17',
       requirements: 'CEO Junior App + Active Membership',
       requiresMembership: true,
       offlineSupport: true,

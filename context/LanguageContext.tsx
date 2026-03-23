@@ -421,7 +421,7 @@ const translations = {
         padres: { title: "Padres 3.0", desc: "Comunidad de padres conscientes que se capacitan para guiar a sus hijos en la era digital con valores cristianos y herramientas prácticas." },
         stareduca: { title: "Stareduca.com", desc: "Plataforma educativa digital donde se alojan cursos, recursos y contenido formativo para toda la comunidad." },
         starbooks: { title: "Starbooks (App)", desc: "Aplicación móvil educativa que facilita el aprendizaje continuo, seguimiento de progreso y conexión comunitaria." },
-        ceojr: { title: "CEO Junior", desc: "Programa insignia para adolescentes emprendedores (13-18 años) que los transforma en líderes digitales con mentalidad de CEO, combinando valores cristianos con habilidades de emprendimiento digital." }
+        ceojr: { title: "CEO Junior", desc: "Programa insignia para adolescentes emprendedores (10-17 años) que los transforma en líderes digitales con mentalidad de CEO, combinando valores cristianos con habilidades de emprendimiento digital." }
       },
       originalidad: {
         title: "Originalidad y Carácter Distintivo",
@@ -654,7 +654,7 @@ const translations = {
       whatIncludes: "¿Qué incluye",
       ceoJuniorDesc: "La app donde tu hijo aprende negocios digitales, inglés profesional e inteligencia artificial, con mentores reales desde Estados Unidos.",
       padres30Desc: "Tu centro de control como padre: aprende crianza digital, monitorea el progreso de tus hijos y accede a contenido de expertos.",
-      forYourChild: "Para tu hijo (13-18 años)",
+      forYourChild: "Para tu hijo (10-17 años)",
       forYouAsParent: "Para ti como padre/madre"
     }
   },
@@ -1070,7 +1070,7 @@ const translations = {
         padres: { title: "Parents 3.0", desc: "Community of conscious parents who train to guide their children in the digital age with Christian values and practical tools." },
         stareduca: { title: "Stareduca.com", desc: "Digital educational platform where courses, resources and training content for the entire community are hosted." },
         starbooks: { title: "Starbooks (App)", desc: "Educational mobile application that facilitates continuous learning, progress tracking and community connection." },
-        ceojr: { title: "CEO Junior", desc: "Flagship program for teenage entrepreneurs (13-18 years) that transforms them into digital leaders with CEO mindset, combining Christian values with digital entrepreneurship skills." }
+        ceojr: { title: "CEO Junior", desc: "Flagship program for teenage entrepreneurs (10-17 years) that transforms them into digital leaders with CEO mindset, combining Christian values with digital entrepreneurship skills." }
       },
       originalidad: {
         title: "Originality and Distinctive Character",
@@ -1303,7 +1303,7 @@ const translations = {
       whatIncludes: "What's included in",
       ceoJuniorDesc: "The app where your child learns digital business, professional English, and artificial intelligence, with real mentors from the United States.",
       padres30Desc: "Your control center as a parent: learn digital parenting, monitor your children's progress, and access expert content.",
-      forYourChild: "For your child (13-18 years)",
+      forYourChild: "For your child (10-17 years)",
       forYouAsParent: "For you as a parent"
     }
   }
