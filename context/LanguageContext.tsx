@@ -22,7 +22,7 @@ const translations = {
         ceojr: "CEO Junior",
         parents: "Padres 3.0"
       },
-      cta: "CONTÁCTANOS"
+      cta: "INSCR\u00cdBETE"
     },
     hero: {
       tag: "",
@@ -671,7 +671,7 @@ const translations = {
         ceojr: "CEO Junior",
         parents: "Parents 3.0"
       },
-      cta: "CONTACT US"
+      cta: "ENROLL NOW"
     },
     hero: {
       tag: "",

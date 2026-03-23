@@ -173,22 +173,11 @@ const SuperAppSpotlight: React.FC<{
             <video
               src={app.videoUrl}
               className="w-full h-full object-cover"
-              muted
-              loop
+              controls
               playsInline
               preload="metadata"
-              onMouseEnter={(e) => (e.target as HTMLVideoElement).play()}
-              onMouseLeave={(e) => {
-                const v = e.target as HTMLVideoElement;
-                v.pause();
-                v.currentTime = 0;
-              }}
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-transparent transition-colors pointer-events-none">
-              <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 group-hover:opacity-0 transition-all duration-300">
-                <Play size={28} className="text-white ml-1" />
-              </div>
-            </div>
+            {/* Native video controls handle play/pause */}
           </div>
         ) : (
           <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-video">

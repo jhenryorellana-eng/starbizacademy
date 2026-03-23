@@ -210,8 +210,9 @@ const Navbar: React.FC = () => {
             </button>
 
              <a
-              href="#contacto"
-              onClick={(e) => handleNavClick(e, '#contacto')}
+              href="https://app.starbizacademy.com/checkout"
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative inline-flex group"
             >
               <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
@@ -298,8 +299,10 @@ const Navbar: React.FC = () => {
               </div>
 
               <a
-                href="#contacto"
-                onClick={(e) => { handleNavClick(e, '#contacto'); setIsOpen(false); }}
+                href="https://app.starbizacademy.com/checkout"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
                 className="mt-4 text-center bg-brand-orange text-white px-4 py-3 rounded-xl font-bold font-display uppercase tracking-wider"
               >
                 {t.navbar.cta}
