@@ -11,6 +11,7 @@ import Parents30PolicyPage from './pages/Parents30PolicyPage';
 import EcosystemPage from './pages/EcosystemPage';
 import CEOJuniorSupportPage from './pages/CEOJuniorSupportPage';
 import Parents30SupportPage from './pages/Parents30SupportPage';
+import Parents30TermsPage from './pages/Parents30TermsPage';
 
 const App: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const App: React.FC = () => {
           <Route path="/padres-3/politica-privacidad" element={<Parents30PolicyPage />} />
           <Route path="/ceo-junior/soporte" element={<CEOJuniorSupportPage />} />
           <Route path="/padres-3/soporte" element={<Parents30SupportPage />} />
+          <Route path="/padres-3/terminos-servicio" element={<Parents30TermsPage />} />
         </Routes>
       </LanguageProvider>
     </BrowserRouter>
