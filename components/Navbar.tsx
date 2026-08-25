@@ -210,7 +210,7 @@ const Navbar: React.FC = () => {
             </button>
 
              <a
-              href="https://app.starbizacademy.com/checkout"
+              href="https://app.starbizacademy.com/enrollment"
               target="_blank"
               rel="noopener noreferrer"
               className="relative inline-flex group"
@@ -299,7 +299,7 @@ const Navbar: React.FC = () => {
               </div>
 
               <a
-                href="https://app.starbizacademy.com/checkout"
+                href="https://app.starbizacademy.com/enrollment"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}

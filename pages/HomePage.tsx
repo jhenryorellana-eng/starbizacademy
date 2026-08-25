@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
                   Accede a nuestra plataforma de aprendizaje y comienza a formar a tu hijo como lider digital.
                 </p>
                 <a
-                  href="https://app.starbizacademy.com/checkout"
+                  href="https://app.starbizacademy.com/enrollment"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-brand-orange via-brand-purple to-brand-cyan text-white font-bold text-sm uppercase tracking-widest rounded-full hover:scale-105 transition-transform duration-300 shadow-lg shadow-brand-purple/30"
